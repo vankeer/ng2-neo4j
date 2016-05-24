@@ -1,0 +1,5 @@
+[src/**.ts]
+indent_style = tab
+trim_trailing_whitespace = true
+spaces_around_operators = inside
+insert_final_newline = false
