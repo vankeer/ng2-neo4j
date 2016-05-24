@@ -2,7 +2,7 @@
   "name": "ng2-neo4j",
   "version": "0.0.0",
   "description": "A Neo4j REST API SDK for Angular2 applications.",
-  "main": "ng2-neo4j.js",
+  "main": "main.js",
   "scripts": {
     "typings": "typings install",
     "tsc": "tsc",
