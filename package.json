@@ -2,7 +2,8 @@
   "name": "ng2-neo4j",
   "version": "0.0.0",
   "description": "A Neo4j REST API SDK for Angular2 applications.",
-  "main": "main.js",
+  "main": "ng2-neo4j.js",
+  "typings": "./ng2-neo4j.d.ts",
   "scripts": {
     "typings": "typings install",
     "tsc": "tsc",
@@ -17,7 +18,9 @@
     "Library",
     "Neo4j"
   ],
-  "author": "jhades.dev@gmail.com",
+  "author": {
+    "name": "Laurens Van Keer"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/vankeer/ng2-neo4j/issues"

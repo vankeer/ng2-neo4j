@@ -1,7 +1,22 @@
+# Node
+node_modules/*
 npm-debug.log
-node_modules
-jspm_packages
-.idea
-lib
-build
 
+# TypeScript
+*.js
+*.map
+
+# JetBrains
+.idea
+.project
+.settings
+.idea/*
+*.iml
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Mac
+.DS_Store
+**/.DS_Store
