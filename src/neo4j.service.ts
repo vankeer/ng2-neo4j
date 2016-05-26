@@ -2,6 +2,7 @@ import {Injectable, Inject} from '@angular/core';
 import {Http, Headers, RequestOptions} from '@angular/http';
 import {Observable} from "rxjs";
 import {Neo4jSettings} from "./neo4j-settings.model";
+import {serialize} from "./utils";
 
 @Injectable()
 export class Neo4jService {
@@ -21,6 +22,12 @@ export class Neo4jService {
 
 	getNodesByLabel(label: string): Observable<any[]> {
 		return this.http.get(`${this.settings.endpoint}/db/data/label/${label}/nodes`, this.defaultOptions)
+			.map(res => res.json());
+	}
+
+	getNodesByLabelAndProperty(label: string, properties: {}): Observable<any[]> {
+		let params = serialize(properties);
+		return this.http.get(`${this.settings.endpoint}/db/data/label/${label}/nodes?${params}`, this.defaultOptions)
 			.map(res => res.json());
 	}
 }
