@@ -30,4 +30,13 @@ export class Neo4jService {
 		return this.http.get(`${this.settings.endpoint}/db/data/label/${label}/nodes?${params}`, this.defaultOptions)
 			.map(res => res.json());
 	}
+
+	cypher(query: string, params?: any): Observable<any> {
+		let body = {
+			query: query,
+			params: params
+		};
+		return this.http.post(`${this.settings.endpoint}/db/data/cypher`, JSON.stringify(body), this.defaultOptions)
+			.map(res => res.json());
+	}
 }
