@@ -7,7 +7,8 @@
   "scripts": {
     "typings": "typings install",
     "tsc": "tsc",
-    "tsc:w": "tsc -w"
+    "tsc:w": "tsc -w",
+    "postinstall": "tsc"
   },
   "repository": {
     "type": "git",
