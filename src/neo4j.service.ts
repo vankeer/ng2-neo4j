@@ -1,6 +1,7 @@
 import {Injectable, Inject} from '@angular/core';
 import {Http, Headers, RequestOptions} from '@angular/http';
 import {Observable} from "rxjs";
+import 'rxjs/add/operator/map';
 import {Neo4jSettings} from "./neo4j-settings.model";
 import {serialize} from "./utils";
 
